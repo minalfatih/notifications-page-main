@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  --White: hsl(0, 0%, 100%);
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue-1: hsl(211, 68%, 94%);
+  --Light-grayish-blue-2: hsl(205, 33%, 90%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+}
+body {
+  /* font-size: 18px; */
+  background-color: var(--Very-light-grayish-blue);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--White);
+  width: 660px;
+  height: 740px;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.notif {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notif h2 {
+  color: var(--Very-dark-blue);
+  font-weight: 800;
+}
+.notif h2 span {
+  background-color: var(--Blue);
+  color: var(--White);
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 15px;
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.notif p {
+  color: var(--Dark-grayish-blue);
+}
+.click {
+  padding: 15px 10px 15px 15px;
+  border-radius: 6px;
+}
+.active {
+  background-color: var(--Light-grayish-blue-1);
+}
+.active:hover {
+  cursor: pointer;
+}
+.info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--Grayish-blue);
+  position: relative;
+}
+.notif p:hover,
+span:hover:not(.notif h2 span) {
+  color: var(--Blue) !important;
+  cursor: pointer;
+}
+span {
+  font-weight: 800;
+}
+.info div span:first-child {
+  color: var(--Very-dark-blue);
+  font-weight: bold;
+}
+.info div span:nth-child(2) {
+  color: var(--Dark-grayish-blue);
+  font-weight: bold;
+}
+.info div .chess {
+  color: var(--Blue) !important;
+  font-weight: bold;
+}
+.info div .chess-img:hover {
+  border: 3px solid var(--Light-grayish-blue-1);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.info .dot {
+  background-color: var(--Red);
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  margin: 7px 0px 0px 8px;
+  border-radius: 50%;
+}
+img {
+  width: 35px;
+}
+.click p {
+  margin: 4px 0px 0px 0px;
+  font-size: 14px;
+}
+.info .comment {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.click .diffr {
+  align-items: flex-start;
+}
+.click .message {
+  border: 1px solid var(--Light-grayish-blue-1);
+  padding: 10px;
+  margin-top: 10px;
+}
+.click .message:hover {
+  background-color: var(--Light-grayish-blue-1);
+  cursor: pointer;
+}
+@media (max-width: 400px) {
+  main {
+    top: 55%;
+    width: 100%;
+    height: 840px;
+  }
+}
